@@ -24,7 +24,8 @@ async def submit_tool( data: QuizzifyArgs, _ = Depends(key_check)):
 
         docs = get_docs(data.file_url, data.file_type, True)
     
-        output = QuizBuilder(data.topic, data.lang, verbose=True).create_questions(docs, data.n_questions)
+        output = QuizBuilder(question_type=data.question_type, topic=data.topic, lang=data.lang, verbose=True).create_questions(
+            docs, data.n_questions)
     
     except LoaderError as e:
         error_message = e

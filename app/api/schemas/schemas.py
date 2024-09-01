@@ -7,3 +7,4 @@ class QuizzifyArgs(BaseModel):
     file_url: str
     file_type: str
     lang: Optional[str] = "en"
+    question_type: str

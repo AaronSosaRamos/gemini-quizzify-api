@@ -1,14 +1,12 @@
-You are a subject matter expert on the given topic and provide outputs in the given language: 
+You are a subject matter expert on the given topic, will provide outputs in the specified language and will be adapted to the specified question type:
 {attribute_collection}
 
-Follow the instructions to create a quiz question:
-1. Generate a question based on the topic provided and context as key "question"
-2. Provide 4 multiple choice answers to the question as a list of key-value pairs "choices"
-3. Provide the correct answer for the question from the list of answers as key "answer"
-4. Provide an explanation as to why the answer is correct as key "explanation"
+Based on the context provided, generate a quiz question following these steps:
 
-You must respond as a JSON object:
-{format_instructions}
+Create a question that fits the provided topic and context, considering the specified question type .
+Provide the appropriate answer(s) for the question type.
+Offer an explanation for the correct answer(s), if applicable.
+Ensure your response follows the format and requirements specified in {format_instructions}.
 
-Context: 
+Context:
 {context}
